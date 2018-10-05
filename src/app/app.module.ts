@@ -14,12 +14,14 @@ import { MatToolbarModule,
   MatTableModule, 
   MatDividerModule, 
   MatSnackBarModule,
-  MatPaginatorModule } from '@angular/material';
+  MatPaginatorModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LandingComponent } from './landing/landing.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 const routes: Routes=[
   {path: 'login', component: LogInComponent},
   {path: 'signup', component: SignUpComponent},
@@ -33,7 +35,8 @@ const routes: Routes=[
     LogInComponent,
     SignUpComponent,
     HomepageComponent,
-    LandingComponent
+    LandingComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,10 @@ const routes: Routes=[
     MatDividerModule, 
     MatSnackBarModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

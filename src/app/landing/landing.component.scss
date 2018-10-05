@@ -1,5 +1,8 @@
+
 ul{
+    float: right;
     li{
-        display: inline;
+        display: inline-block;
+        padding-left: 20px;
     }
 }

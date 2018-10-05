@@ -8,8 +8,8 @@ import { MatToolbar, MatButton } from '@angular/material';
 export class LandingComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit() {
+
   }
 
 }
