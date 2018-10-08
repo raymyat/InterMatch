@@ -1,8 +1,41 @@
-
-ul{
-    float: right;
-    li{
-        display: inline-block;
-        padding-left: 20px;
+header .mat-toolbar{
+    background:#343F4B;
+    color: white;
+    padding-left:2.5em;
+    padding-right:2.5em;
+    h1{
+        margin: 0 auto;
+        font-size:24px;
+    
     }
+    a{
+        font-size:17px;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .mat-icon{
+        color: accent;
+    }
+}
+.sliderCont{
+    width:80%;
+    padding-top:2.5em;
+    padding-bottom:2.5em;
+    .mat-card{
+         height: 700px;
+         width: 90%;
+        .mat-card-img{
+           float: left;
+        }
+    }
+}
+footer .mat-toolbar{
+    background:#343F4B;
+    color: white;
+    padding-left:2.5em;
+    padding-right:2.5em;
+    position: fixed;
+    height: 150px;
+    bottom: 0px;
+
 }
