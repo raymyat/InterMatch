@@ -16,7 +16,7 @@ import { MatToolbarModule,
   MatTableModule,
   MatDividerModule,
   MatSnackBarModule,
-  MatPaginatorModule } from '@angular/material';
+  MatPaginatorModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -27,6 +27,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
 import { WebsocketService } from './websocket.service';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 const routes: Routes=[
   {path: 'login', component: LogInComponent},
   {path: 'signup', component: SignUpComponent},
@@ -45,7 +47,8 @@ const routes: Routes=[
     HomepageComponent,
     LandingComponent,
     CompanyComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    MainNavComponent
   ],
   imports: [
     SocketIoModule.forRoot(config) ,
@@ -65,7 +68,10 @@ const routes: Routes=[
     MatDividerModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [
     WebsocketService,
