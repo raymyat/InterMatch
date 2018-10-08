@@ -10,6 +10,10 @@ var server = http.createServer(app);
 var io = socketIO(server);
 
 app.use(express.static(publicPath));
-
+io.on('connection',(socket)=>{
+    socket.on('message',(message)=>{
+      console.log('socket works',message);
+    });
+});
 
 server.listen(port , ()=> console.log('Server started on', port));

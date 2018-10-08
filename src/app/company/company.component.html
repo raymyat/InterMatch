@@ -1,0 +1,10 @@
+<p>
+  company works!
+</p>
+<div id="display">
+  <div *ngFor="let user of users$">
+    <div>{{ user.name }}</div>
+    <button type="button" name="yes" (click)="onClick(true)">Yes</button>
+    <button type="button" name="no " (click)="onClick(false)" >No</button>
+  </div>
+</div>
