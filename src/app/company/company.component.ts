@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { WebsocketService } from '../websocket.service';
+
 
 
 @Component({
@@ -12,13 +12,13 @@ export class CompanyComponent implements OnInit {
 
 
 
-  constructor(private ws: WebsocketService) { }
+  constructor() { }
 
   ngOnInit() {
  
   }
   onClick(res){
-    this.ws.sendMessage(res);
+  
     if (res){
       console.log("heyy yes")
     }else{

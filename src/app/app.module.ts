@@ -3,8 +3,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SocketIoModule, SocketIoConfig } from 'ng6-socket-io';
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 import { MatToolbarModule,
   MatFormFieldModule,
   MatInputModule,
@@ -24,8 +22,6 @@ import { LandingComponent } from './landing/landing.component';
 import { CompanyComponent } from './company/company.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './data.service';
-import { WebsocketService } from './websocket.service';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 const routes: Routes=[
@@ -48,7 +44,7 @@ const routes: Routes=[
     MainNavComponent
   ],
   imports: [
-    SocketIoModule.forRoot(config) ,
+    
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -71,8 +67,7 @@ const routes: Routes=[
     MatListModule
   ],
   providers: [
-    WebsocketService,
-    DataService,
+
   ],
   bootstrap: [AppComponent]
 })
